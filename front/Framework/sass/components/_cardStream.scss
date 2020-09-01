@@ -1,0 +1,19 @@
+.Card-component.cardStream {
+  background-color: #fff;
+  color: black;
+
+  .CardHeader-component__subheader {
+    color: gray;
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  + small {
+    margin-top: 10px;
+    display: block;
+  }
+}

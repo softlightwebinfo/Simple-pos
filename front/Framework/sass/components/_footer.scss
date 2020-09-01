@@ -1,0 +1,23 @@
+.footer {
+  img {
+    max-width: 100%;
+    height: 100px;
+  }
+
+  &__icons {
+    img {
+      width: 20px;
+      height: 20px;
+      margin: 5px;
+    }
+  }
+
+  &__foo {
+    color: black;
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}

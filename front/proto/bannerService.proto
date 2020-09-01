@@ -1,0 +1,58 @@
+syntax = "proto3";
+package proto;
+
+message BannerServiceCreateRq {
+    string token = 1;
+    string title = 2;
+    string subtitle = 3;
+    string route = 4;
+    string button = 5;
+    string page = 6;
+    string image = 7;
+}
+message BannerServiceUpdateRq {
+    string token = 1;
+    string title = 2;
+    string subtitle = 3;
+    string route = 4;
+    string button = 5;
+    string page = 6;
+    string image = 7;
+    int64 id = 8;
+}
+message BannerServiceBool {
+    bool success = 1;
+}
+message BannerServiceGetAllRq {
+    string token = 1;
+}
+message Banner {
+    int64 id = 1;
+    string title = 2;
+    string subtitle = 3;
+    string route = 4;
+    string button = 5;
+    string page = 6;
+    string image = 7;
+    bool active = 8;
+}
+message BannerServiceGetAllRs {
+    repeated Banner Result = 1;
+    int64 count = 2;
+}
+message BannerServiceActiveRq {
+    string token = 1;
+    bool active = 2;
+    int64 id = 3;
+}
+message BannerServiceDeleteRq {
+    string token = 1;
+    int64 id = 2;
+}
+service BannerService {
+    rpc Create (BannerServiceCreateRq) returns (BannerServiceBool);
+    rpc Update (BannerServiceUpdateRq) returns (BannerServiceUpdateRq);
+    rpc GetAll (BannerServiceGetAllRq) returns (BannerServiceGetAllRs);
+    rpc Active (BannerServiceActiveRq) returns (BannerServiceBool);
+    rpc Delete (BannerServiceDeleteRq) returns (BannerServiceBool);
+}

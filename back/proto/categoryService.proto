@@ -1,0 +1,45 @@
+syntax = "proto3";
+package proto;
+message CategoryServiceBool {
+  bool success = 1;
+}
+message CategoryServiceCreateRq {
+  string name = 1;
+  int64 parentId = 2;
+}
+message CategoryServiceModel {
+  int64 id = 1;
+  string name = 2;
+  int64 parentId = 3;
+}
+message CategoryServiceUpdateRq {
+  int64 id = 1;
+  string name = 2;
+  int64 parentId = 3;
+}
+message CategoryServiceGetRq {
+  int64 id = 1;
+}
+message CategoryServiceGetRs {
+  int64 id = 1;
+  string name = 2;
+  int64 parentId = 3;
+}
+message CategoryServiceGetAllRq {
+  string offset = 1;
+  string limit = 2;
+}
+message CategoryServiceGetAllRs {
+  repeated CategoryServiceModel result = 1;
+  int64 count = 2;
+}
+message CategoryServiceDeleteRq {
+  int64 id = 1;
+}
+service CategoryService {
+  rpc Create (CategoryServiceCreateRq) returns (CategoryServiceBool);
+  rpc Update (CategoryServiceUpdateRq) returns (CategoryServiceBool);
+  rpc Get (CategoryServiceGetRq) returns (CategoryServiceGetRs);
+  rpc GetAll (CategoryServiceGetAllRq) returns (CategoryServiceGetAllRs);
+  rpc Delete (CategoryServiceDeleteRq) returns (CategoryServiceBool);
+}

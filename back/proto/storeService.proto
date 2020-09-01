@@ -1,0 +1,22 @@
+syntax = "proto3";
+package proto;
+message StoreServiceGetAllRQ{
+
+}
+
+message StoreServiceGetAllRS{
+  repeated StoreList stores = 1;
+}
+
+message StoreList {
+  int64 id = 1;
+  string name = 2;
+  string email = 3;
+  string phone = 4;
+  string address = 5;
+  string code = 6;
+}
+
+service StoreService {
+  rpc GetAll (StoreServiceGetAllRQ) returns (StoreServiceGetAllRS);
+}

@@ -1,0 +1,28 @@
+.listGear {
+  clear: both;
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  &__item {
+    display: flex;
+    margin-bottom: 20px;
+    .Icon-component {
+      $w: 50px;
+      width: $w;
+      height: $w;
+      margin-right: 10px;
+    }
+
+
+    li {
+      font-size: 13px;
+    }
+  }
+
+  &__list {
+    li {
+
+    }
+  }
+}

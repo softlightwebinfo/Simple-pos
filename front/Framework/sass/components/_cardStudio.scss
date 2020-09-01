@@ -1,0 +1,23 @@
+.cardStudio {
+  height: 100%;
+  clear: both;
+  float: left;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  img {
+    max-width: 100%;
+    width: 100%;
+    line-height: 0;
+    margin-bottom: 10px;
+    float: left;
+    position: relative;
+    max-width: 100%;
+    display: inline-block;
+    height: 220px;
+  }
+
+  &__title {
+    margin-bottom: .5rem !important;
+  }
+}

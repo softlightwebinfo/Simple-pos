@@ -1,0 +1,55 @@
+.bannerTitle {
+  $then: &;
+  @extend .headerBanner;
+
+  &__title {
+    text-align: center;
+  }
+
+  &__inner {
+    width: 100%;
+    vertical-align: bottom;
+    padding-bottom: 50px;
+    z-index: 2;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    margin: 0;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  &__data {
+    float: left;
+    clear: both;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__item {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &--special {
+    height: 500px;
+    box-sizing: border-box;
+
+    #{$then}__title {
+      text-align: left;
+      background-color: black;
+      display: inline-flex;
+      padding: 10px 20px;
+    }
+  }
+}
+

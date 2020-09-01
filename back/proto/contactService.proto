@@ -1,0 +1,16 @@
+syntax = "proto3";
+package proto;
+message ContactServiceBool {
+    bool success = 1;
+}
+
+message ContactServiceSendRq {
+    string name = 1;
+    string email = 2;
+    string phone = 3;
+    string message = 4;
+}
+
+service ContactService {
+    rpc Send (ContactServiceSendRq) returns (ContactServiceBool);
+}

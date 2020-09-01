@@ -1,0 +1,85 @@
+syntax = "proto3";
+package proto;
+message UserServiceBool {
+  bool success = 1;
+}
+message UserSocial {
+  string icon = 1;
+  string url = 2;
+}
+message UserServiceCreateRq {
+  string email = 1;
+  string password = 2;
+  bool active = 3;
+  string name = 4;
+}
+message UserServiceModel {
+  int64 id = 1;
+  string email = 2;
+  string password = 3;
+  string createdAt = 4;
+  string updatedAt = 5;
+  bool active = 6;
+  string name = 7;
+}
+message UserServiceUpdateRq {
+  string email = 1;
+  string password = 2;
+  bool active = 3;
+  string name = 4;
+  int64 id = 5;
+}
+message UserServiceGetRq {
+  int64 id = 1;
+}
+message UserServiceLoginRq {
+  string email = 1;
+  string password = 2;
+}
+message UserServiceStartRq {
+  int64 id = 1;
+  string token = 2;
+}
+message UserServiceLoginRs {
+  string token = 1;
+  UserServiceModel user = 2;
+}
+message UserServiceGetRs {
+  int64 id = 1;
+  string email = 2;
+  string updatedAt = 3;
+  string name = 4;
+  string description = 5;
+  repeated UserSocial socials = 6;
+}
+message UserServiceGetAllRq {
+  string offset = 1;
+  string limit = 2;
+}
+message UserServiceGetAllRs {
+  repeated UserServiceModel result = 1;
+  int64 count = 2;
+}
+message UserServiceDeleteRq {
+  int64 id = 1;
+}
+message UserServiceGetAllTokensRq{
+
+}
+message UserServiceGetAllTokensRs{
+  repeated NotToken tokens = 1;
+}
+message NotToken{
+  string token = 1;
+  string name = 2;
+}
+service UserService {
+  rpc Create (UserServiceCreateRq) returns (UserServiceLoginRs);
+  rpc Update (UserServiceUpdateRq) returns (UserServiceBool);
+  rpc Get (UserServiceGetRq) returns (UserServiceGetRs);
+  rpc Login (UserServiceLoginRq) returns (UserServiceLoginRs);
+  rpc Start (UserServiceStartRq) returns (UserServiceLoginRs);
+  rpc GetAll (UserServiceGetAllRq) returns (UserServiceGetAllRs);
+  rpc GetAllTokens (UserServiceGetAllTokensRq) returns (UserServiceGetAllTokensRs);
+  rpc Delete (UserServiceDeleteRq) returns (UserServiceBool);
+}

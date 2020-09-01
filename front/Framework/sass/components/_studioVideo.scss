@@ -1,0 +1,234 @@
+$stH: calc(100vh - 200px);
+.studioVideo {
+  $then: &;
+  display: flex;
+
+  &__video {
+    flex: 1;
+    height: $stH;
+
+    video {
+      width: 100%;
+      height: 100%;
+      background-color: black;
+    }
+
+    .video-js {
+      width: 100%;
+      height: $stH;
+    }
+
+    .vjs-big-play-button {
+      right: 10px !important;
+      bottom: 10px !important;
+      margin: auto !important;
+    }
+  }
+
+  &__chat {
+    flex: 0 0 400px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__chat-header {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 10px 10px -17px;
+    border-bottom: 1px solid gainsboro;
+
+    .Typography-component {
+      padding: 15px;
+      flex: 1;
+      position: relative;
+
+      &::after {
+        border-bottom: 4px solid transparent;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:first-child {
+        border-right: 1px solid gainsboro;
+      }
+
+      &.active {
+        background-color: gainsboro;
+        font-weight: bold;
+
+        &::after {
+          border-bottom: 4px solid darkorange;
+          content: "";
+          width: 100%;
+          display: block;
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__chat-content {
+    background-color: #fff;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .scroll {
+      padding: 20px;
+    }
+
+    .fallback {
+      margin-top: auto;
+      width: 100%;
+      padding: 10px;
+    }
+
+    .message__info {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5px;
+      font-size: 12px;
+    }
+
+    .outgoing__message {
+      max-width: 70%;
+      margin-left: auto;
+
+      .sent__message {
+        margin-bottom: 20px;
+
+        p {
+          margin: 0;
+          background-color: yellowgreen;
+          padding: 11px;
+          border-radius: 5px;
+          color: white;
+        }
+      }
+    }
+
+    .incoming__message {
+      max-width: 70%;
+      margin-right: auto;
+
+      .received__message {
+        margin-bottom: 20px;
+
+        p {
+          margin: 0;
+          background-color: #efefef;
+          padding: 11px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 898px) {
+    #{$then}__chat {
+      display: none;
+    }
+  }
+
+  &__chat_ib {
+    padding: 5px 10px;
+
+    h5 {
+      margin: 0;
+    }
+  }
+
+  &__chat-footer {
+    form {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      input {
+        padding-right: 60px;
+      }
+
+      button {
+        margin-left: 10px;
+        margin-right: 10px;
+        color: black;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
+
+.video-js .vjs-big-play-button {
+  right: 10px !important;
+  bottom: 10px !important;
+  margin: auto !important;
+}
+
+.vjs-error-display.vjs-modal-dialog {
+  display: none;
+}
+
+.studioVideo-container {
+  &__content {
+    display: flex;
+  }
+
+  &__left {
+    flex: 1;
+    padding: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  &__right {
+    flex: 0 0 400px;
+  }
+
+  &__subTitle {
+    margin-top: 10px;
+
+    span {
+      display: inline-flex;
+      margin-right: 10px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      display: flex;
+
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  &__description {
+    a {
+      text-decoration: none;
+      color: cornflowerblue;
+
+      &:hover {
+        color: deepskyblue;
+      }
+    }
+  }
+}

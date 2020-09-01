@@ -1,0 +1,25 @@
+.template {
+  margin-top: 96px;
+  @media screen and (min-width: 768px) {
+    margin-top: calc(70px + 1.6rem);
+  }
+
+  &-content {
+    display: block;
+    //float: left;
+    //clear: both;
+  }
+
+  &-footer {
+    float: left;
+    clear: both;
+    display: inline-block;
+    width: 100%;
+    background-color: gainsboro;
+    color: white;
+    padding-top: 70px;
+    padding-right: 0;
+    padding-bottom: 50px;
+    padding-left: 0;
+  }
+}

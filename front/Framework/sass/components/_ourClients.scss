@@ -1,0 +1,17 @@
+.ourClients {
+  padding-top: 85px;
+  padding-bottom: 85px;
+  float: left;
+  clear: both;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+
+  .Typography-component {
+    margin-bottom: 1rem !important;
+
+    + .Typography-component {
+      margin-bottom: 30px !important;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.headerBanner {
+  margin-left: 0;
+  margin-right: 0;
+  position: relative;
+  box-sizing: content-box;
+  clear: both;
+  float: left;
+  padding-top: 195px;
+  width: 100%;
+  padding-bottom: 195px;
+  left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+
+  &__subtitle,
+  &__title {
+    margin-bottom: 1rem!important;
+  }
+}

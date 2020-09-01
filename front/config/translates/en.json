@@ -1,0 +1,57 @@
+{
+  "subtitle": "Are you ready for a great experience?",
+  "buttonIndex": "check out our studios",
+  "language": "en",
+  "screens": {
+    "homepage": {
+      "mainPhrase": "Here my main phrase"
+    }
+  },
+  "title": {
+    "home": "Homepage",
+    "stores": "Stores"
+  },
+  "menu": {
+    "studios": "Studios",
+    "recording": "Recording",
+    "rates": "Rates",
+    "events": "Events",
+    "shop": "Shop",
+    "contact": "Contact",
+    "live": "Live",
+    "streams": "Streams"
+  },
+  "streams": "Live Recorded Videos",
+  "recording": "Recording",
+  "whyChoose": "Why Choose the mallorca live recording studio?",
+  "whyChooseSub": "Portable recording studio\n\nAt LR Studio (Live Recording Studio) we are dedicated to recording concerts and live sessions on simultaneous tracks to be able to mix and edit the content of each track individually in our Studio, to obtain the highest quality.\n\nWe have professional material suitable for this type of recording, obtaining high quality professional results.\n\nAs musicians and technicians that we are, we know how cumbersome, heavy and cold it is to record in a studio, the loss of power and emotions that are obtained from the individual recording by tracks of each musician, for this same reason, we bet on a type of more natural, more organic recording, obtaining the same sound quality as in a studio. But giving it more emotion, and freshness, in order to transmit to the listener the emotions that are in a live performance.",
+  "weSocial": "We're us",
+  "contactUs": "Contact us",
+  "selectYourStudio": "Select your Studio",
+  "selectYourStudioSubtitle": "Studios are price packs for live or multitrack recording",
+  "reachOut": "Reach out to us",
+  "rooms": "Studios",
+  "rates": "Rates",
+  "contact": "Contact us",
+  "contactSub": "Please fill out the quick form and we will bee in touch with lighting speed",
+  "address": "Address",
+  "phone": "Phone",
+  "email": "Email",
+  "forSupport": "For support, booking or any questions",
+  "openingHours": "Opening hours",
+  "pleaseNote": "Please note our working hours to avoid any disappointment.",
+  "categoriesButtons": {
+    "audioRecording": "Audio Recording",
+    "rehearsalStudios": "Rehearsal Studios",
+    "onlineRadio": "Online radio",
+    "streamingRadio": "Radio streaming",
+    "liveInterviews": "Live interviews",
+    "liveRecording": "Live interviews"
+  },
+  "recordingButtons": {
+    "audioRecording": "Audio Recording",
+    "mixing": "Mixing",
+    "editing": "Editing",
+    "multiTrack": "Multi track"
+  }
+}

@@ -1,0 +1,1 @@
+INSERT INTO public.users (id, email, updated_at, created_at, name, active, password) VALUES (1, 'admin@admin.com', '2020-07-31 09:03:57.038970', '2020-07-31 09:03:57.038970', 'Administrador', true, '1234');

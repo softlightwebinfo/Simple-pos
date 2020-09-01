@@ -1,0 +1,89 @@
+syntax = "proto3";
+package proto;
+
+message StudioServiceCreateRq {
+  string token = 1;
+  string title = 2;
+  string description = 3;
+  string size = 4;
+  int32 capacity = 5;
+  float priceFrom = 6;
+  bool active = 7;
+}
+message StudioServiceUpdateRq {
+  string token = 1;
+  string title = 2;
+  string description = 3;
+  string size = 4;
+  int32 capacity = 5;
+  float priceFrom = 6;
+  bool active = 7;
+  int64 id = 8;
+}
+message StudioServiceBool {
+  bool success = 1;
+}
+message StudioServiceGetAllRq {
+  string token = 1;
+}
+message Studio {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string size = 4;
+  int32 capacity = 5;
+  float priceFrom = 6;
+  bool active = 7;
+  string image = 8;
+}
+message StudioServiceGetAllRs {
+  repeated Studio Result = 1;
+  int64 count = 2;
+}
+message StudioServiceActiveRq {
+  string token = 1;
+  bool active = 2;
+  int64 id = 3;
+}
+message StudioServiceDeleteRq {
+  string token = 1;
+  int64 id = 2;
+}
+message StudioServiceCreateRs {
+  int64 id = 1;
+}
+message StudioServiceUpdatePricesRq {
+  string token = 1;
+  int64 id = 2;
+  repeated Prices prices = 3;
+}
+message Prices {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  bool isHour = 4;
+  float price = 5;
+  int64 fkStudio = 6;
+}
+message StudioServiceUpdateImagesRq {
+  string token = 1;
+  int64 id = 2;
+  string image = 3;
+}
+message StudioServiceGetAllPricesRq {
+  string token = 1;
+}
+message StudioServiceGetAllPricesRs {
+  repeated Prices Result = 1;
+  int64 count = 2;
+}
+service StudioService {
+  rpc Create (StudioServiceCreateRq) returns (StudioServiceCreateRs);
+  rpc Update (StudioServiceUpdateRq) returns (StudioServiceUpdateRq);
+  rpc UpdatePrices (StudioServiceUpdatePricesRq) returns (StudioServiceBool);
+  rpc UpdateImages (StudioServiceUpdateImagesRq) returns (StudioServiceBool);
+  rpc GetAll (StudioServiceGetAllRq) returns (StudioServiceGetAllRs);
+  rpc GetAllPrices (StudioServiceGetAllPricesRq) returns (StudioServiceGetAllPricesRs);
+  rpc Active (StudioServiceActiveRq) returns (StudioServiceBool);
+  rpc Delete (StudioServiceDeleteRq) returns (StudioServiceBool);
+}

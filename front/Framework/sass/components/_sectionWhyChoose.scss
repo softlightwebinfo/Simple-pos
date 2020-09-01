@@ -1,0 +1,17 @@
+.sectionWhyChoose {
+  clear: both;
+  float: left;
+  width: 100%;
+  padding-top: 85px;
+  padding-bottom: 85px;
+
+  &__title,
+  &__subTitle {
+    text-align: center;
+    margin-bottom: 1rem !important;
+  }
+
+  &__grid {
+    margin-top: 40px;
+  }
+}

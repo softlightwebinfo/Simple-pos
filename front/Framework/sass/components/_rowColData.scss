@@ -1,0 +1,23 @@
+.rowColData {
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    margin-right: 20px;
+  }
+
+  &__right {
+    margin-left: 20px;
+    font-weight: 800;
+    text-align: right;
+  }
+
+  &__description {
+    color: #b4b4b4;
+    margin-top: 5px !important;
+  }
+
+  & + & {
+    margin-top: 20px;
+  }
+}

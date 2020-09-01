@@ -1,0 +1,12 @@
+.editContainerBanner {
+  position: relative;
+  float: left;
+  clear: both;
+  width: 100%;
+  &__tools {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,3 @@
+INSERT INTO public.studios_prices (fk_studio, id, description, price, ishour, title) VALUES (11, 1, 'adsdasd', 23232, false, 'sdasd');
+INSERT INTO public.studios_prices (fk_studio, id, description, price, ishour, title) VALUES (12, 1, 'Descripion', 20, false, 'Prie 1');
+INSERT INTO public.studios_prices (fk_studio, id, description, price, ishour, title) VALUES (12, 2, 'Descripcion', 20, false, 'Price 2');

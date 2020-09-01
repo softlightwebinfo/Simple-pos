@@ -1,0 +1,42 @@
+body {
+  font-family: "Glacial Indifference";
+  font-weight: 400;
+  font-style: normal;
+  color: #212529;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.Form-layout {
+  width: 100% !important;
+  max-width: 480px !important;
+}
+
+@media only screen and (max-width: 991.98px) {
+  div.Dashboard-app__wrapper {
+    margin-left: 0;
+  }
+}
+
+.SidebarMenu-layout ul ul {
+  padding: 0 !important;
+}
+textarea.InputField-component__input{
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #495057;
+  background-clip: padding-box;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  background-color: #fbfbfb;
+  border: 1px solid #e3e3e3;
+  border-radius: 4px;
+  height: inherit;
+  box-sizing: border-box;
+  min-height: 200px;
+}

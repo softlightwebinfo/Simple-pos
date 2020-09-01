@@ -1,0 +1,57 @@
+{
+  "subtitle": "¿Estás list@ para una gran experiencia?",
+  "buttonIndex": "mira nuestros estudios",
+  "language": "es",
+  "screens": {
+    "homepage": {
+      "mainPhrase": "Aquí mi primer mensaje"
+    }
+  },
+  "title": {
+    "home": "Página Principal",
+    "stores": "Tiendas"
+  },
+  "streams": "Videos de directos grabados",
+  "selectYourStudio": "Selecciona tu estudio",
+  "selectYourStudioSubtitle": "Los estudios son packs de precios para la grabacion en directo o en multipistas",
+  "menu": {
+    "studios": "Estudios",
+    "recording": "Grabaciones",
+    "rates": "Tarifas",
+    "events": "Eventos",
+    "shop": "Tienda",
+    "contact": "Contacto",
+    "live": "En directo",
+    "streams": "Videos"
+  },
+  "recording": "Grabaciones",
+  "whyChoose": "¿Por qué elegir Mallorca Live Recording Studio?",
+  "whyChooseSub": "Studio de grabacion portatil\n\nEn LR Studio (Live Recording Studio) nos dedicamos a la grabación de conciertos y sesiones en vivo por pistas simultáneas para poder mezclar y editar el contenido de cada pista de manera individual en nuestro Studio, para obtener la mayor calidad.\n\nDisponemos de material profesional adecuado para este tipo de grabacion, obteniendo resultados profesionales de gran calidad.\n\nCómo músicos y técnicos que somos, sabemos lo engorroso, pesado y frio que es grabar en un studio, la pérdida de potencia y emociones que se obtienen de la grabación individual por pistas de cada músico, por este mismo motivo, apostamos por un tipo de grabación más natural, más orgánica, obteniendo la misma calidad de sonido que en un studio. Pero dándole más emotividad, y frescura, para así lograr transmitir al oyente las emociones que hay en un directo.",
+  "weSocial": "Siguenos en:",
+  "reachOut": "Llegar a nosotros",
+  "contactUs": "Contactanos",
+  "rooms": "Estudios",
+  "rates": "Tarifas",
+  "contact": "Contacta con nosotros",
+  "contactSub": "Complete el formulario rápido y nos comunicaremos con la velocidad de la luz",
+  "address": "Dirección",
+  "phone": "Telefono",
+  "email": "Correo electronico",
+  "forSupport": "Para soporte, reserva o cualquier duda",
+  "pleaseNote": "Tenga en cuenta nuestro horario de trabajo para evitar decepciones.",
+  "openingHours": "Horario de apertura",
+  "categoriesButtons": {
+    "audioRecording": "Grabación de grupos",
+    "rehearsalStudios": "Estudios de ensayo",
+    "onlineRadio": "Radio online",
+    "streamingRadio": "Radio en streaming",
+    "liveInterviews": "Entrevistas en directo",
+    "liveRecording": "Grabación en directo"
+  },
+  "recordingButtons": {
+    "audioRecording": "Grabación de grupos",
+    "mixing": "Mezcla",
+    "editing": "Edición",
+    "multiTrack": "Multipista"
+  }
+}

@@ -1,0 +1,160 @@
+syntax = "proto3";
+package proto;
+
+message ArticleProps {
+    string prop = 1;
+    string value = 2;
+}
+
+message ArticleTag {
+    string tag = 1;
+}
+
+message ArticleComment {
+    int64 id = 1;
+    string createdAt = 2;
+    string description = 3;
+    string name = 4;
+}
+message ArticleCommentLast {
+    int64 id = 1;
+    string createdAt = 2;
+    string description = 3;
+    string name = 4;
+    int64 blog = 5;
+}
+
+message ArticleLine {
+    int64 line = 1;
+    string fkType = 2;
+    map<string, ArticleProps> props = 3;
+}
+
+message ArticleServiceRsBool {
+    bool success = 1;
+}
+message ArticleUserModel {
+    string name = 1;
+}
+message ArticleCategoryModel {
+    string name = 1;
+}
+message ArticleServiceModel {
+    int64 id = 1;
+    string title = 2;
+    string description = 3;
+    int64 fkUserId = 4;
+    int64 fkCategoryId = 5;
+    string updatedAt = 6;
+    ArticleUserModel user = 7;
+    ArticleCategoryModel category = 8;
+}
+message ArticleServicePopularModel {
+    int64 id = 1;
+    string title = 2;
+    string updatedAt = 3;
+}
+// Get all articles
+message ArticleServiceGetAllRq {
+    string offset = 1;
+    string limit = 2;
+    int64 category = 3;
+    bool OrderLast = 4;
+}// Get all articles
+message ArticleServiceGetPopularRq {
+    string offset = 1;
+    string limit = 2;
+}
+message ArticleServiceGetAllRs {
+    repeated ArticleServiceModel result = 1;
+    int64 count = 2;
+}
+
+message ArticleServiceGetPopularRs {
+    repeated ArticleServicePopularModel result = 1;
+    int64 count = 2;
+}
+
+message ArticleServiceGetBookRq {
+    int64 id = 1;
+    string book = 2;
+}
+message ArticleServiceGetBookRs {
+    repeated ArticleLine lines = 1;
+    int64 count = 2;
+    int32 Views = 3;
+}
+// Get article single
+message ArticleServiceGetRq {
+    int64 id = 1;
+}
+message ArticleServiceGetRs {
+    int64 id = 1;
+    string title = 2;
+    string description = 3;
+    int64 fkUserId = 4;
+    int64 fkCategoryId = 5;
+    string updatedAt = 6;
+    ArticleUserModel user = 7;
+    ArticleCategoryModel category = 8;
+    repeated ArticleTag tags = 9;
+}
+message ArticleServiceGetCommentsRq {
+    int64 id = 1;
+    string book = 2;
+}
+message ArticleServiceGetCommentsLastRq {
+
+}
+message ArticleServiceGetCommentsRs {
+    repeated ArticleComment comments = 1;
+}
+message ArticleServiceGetCommentsLastRs {
+    repeated ArticleCommentLast comments = 1;
+}
+// Create article single
+message ArticleServiceCreateRq {
+    string title = 1;
+    string description = 2;
+    int64 fkUserId = 3;
+    int64 fkCategoryId = 4;
+}
+// Update article single
+message ArticleServiceUpdateRq {
+    int64 id = 1;
+    string title = 2;
+    string description = 3;
+    int64 fkCategoryId = 5;
+}
+// Delete article single
+message ArticleServiceDeleteRq {
+    int64 id = 1;
+}
+// Active Article single
+message ArticleServiceActiveRq {
+    int64 id = 1;
+    bool active = 2;
+}
+// Active Article public
+message ArticleServicePublicRq {
+    int64 id = 1;
+}
+message ArticleServiceViewRq {
+    int64 id = 1;
+    string book = 2;
+}
+
+service ArticleService {
+    rpc GetAll (ArticleServiceGetAllRq) returns (ArticleServiceGetAllRs);
+    rpc GetPopular (ArticleServiceGetPopularRq) returns (ArticleServiceGetPopularRs);
+    rpc Get (ArticleServiceGetRq) returns (ArticleServiceGetRs);
+    rpc GetComments (ArticleServiceGetCommentsRq) returns (ArticleServiceGetCommentsRs);
+    rpc GetCommentsLast (ArticleServiceGetCommentsLastRq) returns (ArticleServiceGetCommentsLastRs);
+    rpc GetBook (ArticleServiceGetBookRq) returns (ArticleServiceGetBookRs);
+    rpc Create (ArticleServiceCreateRq) returns (ArticleServiceRsBool);
+    rpc Update (ArticleServiceUpdateRq) returns (ArticleServiceRsBool);
+    rpc Delete (ArticleServiceDeleteRq) returns (ArticleServiceRsBool);
+    rpc Active (ArticleServiceActiveRq) returns (ArticleServiceRsBool);
+    rpc AddView (ArticleServiceViewRq) returns (ArticleServiceRsBool);
+    rpc TogglePublic (ArticleServicePublicRq) returns (ArticleServiceRsBool);
+}

@@ -1,0 +1,61 @@
+syntax = "proto3";
+package proto;
+
+message StreamServiceCreateRq {
+  string token = 1;
+  string title = 2;
+  string description = 3;
+  string video = 4;
+  string views = 5;
+  string clicks = 6;
+  string likes = 7;
+  string dislikes = 8;
+}
+message Stream {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string video = 4;
+  string views = 5;
+  string clicks = 6;
+  string likes = 7;
+  string dislikes = 8;
+  string createdAt = 9;
+}
+message StreamServiceCreateRs {
+  int64 id = 1;
+}
+message StreamServiceGetAllRq {
+
+}
+message StreamServiceGetAllRs {
+  repeated Stream streams = 1;
+}
+message StreamServiceGetRq {
+  string token = 1;
+  int64 id = 2;
+}
+message StreamServiceGetRs {
+  int64 id = 1;
+  string title = 2;
+  string description = 3;
+  string video = 4;
+  string views = 5;
+  string clicks = 6;
+  string likes = 7;
+  string dislikes = 8;
+  string createdAt = 9;
+}
+message StreamServiceStAddRs {
+  bool success = 1;
+}
+message StreamServiceStAddRq{
+  int64 id = 1;
+  string column = 2;
+}
+service StreamService {
+  rpc Create (StreamServiceCreateRq) returns (StreamServiceCreateRs);
+  rpc GetAll (StreamServiceGetAllRq) returns (StreamServiceGetAllRs);
+  rpc Get (StreamServiceGetRq) returns (StreamServiceGetRs);
+  rpc StAdd (StreamServiceStAddRq) returns (StreamServiceStAddRs);
+}
